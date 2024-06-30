@@ -1,0 +1,2746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+        crossorigin="anonymous"
+        />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link type="text/css" rel="stylesheet" href="./css/style.css">
+
+    <link rel="stylesheet" type="text/css" href="./css/cart-slide.css">
+    <link rel="stylesheet" type="text/css" href="./css/glider.min.css">
+
+    <title>AT Mobile Store Full Version - FE</title>
+  
+</head>
+<body>
+    <!-- Header -->
+    <div id="header" style="background-color: #ff0e17;">
+        <div class="container-fluid">
+            <div class="row align-items-center justify-content-between">
+                <div id="left-hi" class="d-flex align-items-center justify-content-center justify-content-lg-start text-light col-lg-6 col-md-12 col-sm-12 col-12">
+                    AT MOBILE Xin chào! 
+                </div>
+                <div id="right-login" class="d-flex align-items-center justify-content-center justify-content-lg-end col-lg-6 col-md-12 col-sm-12 col-12">
+                    <div class="d-flex align-items-center me-3">
+                        <span class="me-2 text-light">
+                            Email: 
+                        </span>
+                        <a href="#" style="text-decoration: none; color: #fff;">
+                            atmobile@support.vn
+                        </a>
+                    </div>
+                    <!-- <div class="custom-login d-flex">
+                        <a href="#">
+                            Đăng nhập
+                        </a>
+                        <span class="text-light mx-1">/</span>
+                        <a href="#">
+                            Đăng ký
+                        </a>
+                    </div> -->
+                </div>
+            </div>
+            <div class="row" style="background-color: #121517">
+                <div class="d-flex align-items-center justify-content-center justify-content-lg-start justify-content-md-center col-lg-3 col-md-12 col-sm-12 col-12">
+                    <img src="./images/att.png" style="height: auto; width: 280px;">
+                </div>
+                <div class="d-flex align-items-center col-lg-3 col-md-12 col-sm-12 col-12">
+                    <form class="d-flex" style="width: 100%;">
+                        <input class="form-control rounded-start rounded-0 border-end-0" type="search" placeholder="Tìm kiếm" aria-label="Search">
+                        <button class="btn rounded-0 rounded-end border-0" type="submit" style="background-color: #fff;"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+            
+                </div>
+                <div class="d-flex align-items-center justify-content-between col-lg-6 col-md-12 col-sm-12 col-12">
+                    <div class="d-flex align-items-center gap-2">
+                        <div class="">
+                            <a href="#"><i class="fa-solid fa-phone fa-2xl" style="color: #ffffff;"></i></a>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <span class="text-light" style="font-weight: bold;">Hotline</span>
+                            <a href="#" style="text-decoration: none; font-weight: bold; color: #fff;">19006750</a>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <div class="">
+                            <a href="#"><i class="fa-solid fa-store fa-2xl" style="color: #ffffff;"></i></a>
+                        </div>
+                        <div class=" d-flex flex-column">
+                            <span class="text-light" style="font-weight: bold;">Hệ thống</span>
+                            <a href="#" style="text-decoration: none; color:#fff;font-weight: bold;">Cửa hàng</a>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                       
+
+                        <a class="cart-link header-link" href="#">
+                            <i class="fa-solid fa-cart-shopping fa-2xl" style="color: #ffffff;"></i>
+                            <div class="cart-quantity">3</div>
+                        </a>
+
+                        <div class="d-flex flex-column">
+                            <span class="text-light" style="font-weight: bold;">Giỏ</span>
+                            <a href="#" style="text-decoration: none; color:#fff;font-weight: bold;">Hàng</a>
+                        </div>
+                
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <!-- End Header -->
+    <div class="container mt-3">
+        <div class="row">
+            <!-- Navbar Slider -->
+            <div class="scrollable-tabs-container col-lg-12 col-md-12 col-12">
+                <!-- <div class="left-arrow"><i id="icon" class="fa-solid fa-chevron-left" style="color: #ffffff;"></i></div> -->
+                <ul id="icons-container">
+                    <li>
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                        <a href="#" class="active">Điện thoại</a>
+                    </li>
+                    <li id="icon-container-2">
+                        <div id="tooltip-2">Nổi bật</div>
+                        <i class="fa-solid fa-laptop"></i><a href="#">Laptop</a>
+                    </li>
+                    <li id="icon-container-1">
+                        <div id="tooltip-1">HOT</div>
+                        <i class="fa-solid fa-headphones"></i><a href="#">Phụ kiện</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-headphones-simple"></i><a href="#">Âm thanh</a>
+                    </li>
+                    <li id="icon-container">
+                        <div id="tooltip">NEW</div>
+                        <i class="fa-brands fa-product-hunt"></i><a href="#">Sản phẩm</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-display"></i><a href="#">Màn hình</a>
+                    </li>
+                    <li>
+                        <i class="fa-regular fa-newspaper"></i><a href="#">Tin tức</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-address-book"></i><a href="#">Liên hệ</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-shield-halved"></i><a href="#">Antivirus</a>
+                    </li>
+                    
+                    <li>
+                        <i class="fa-solid fa-music"></i><a href="#">Âm nhạc</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-microphone"></i><a href="#">Ghi âm</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-wifi"></i><a href="#">Wifi</a>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-usb"></i><a href="#">Lưu trữ</a>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-bluetooth"></i><a href="#">Bluetooth</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-gamepad"></i><a href="#">Gaming</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-vr-cardboard"></i><a href="#">Kính VR</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-store"></i><a href="#">Hệ thống</a>
+                    </li>
+                </ul>
+                <!-- <div class="right-arrow active"><i id="icon" class="fa-solid fa-chevron-right" style="color: #ffffff;"></i></div> -->
+            </div>
+            <!-- End Navbar Slider -->
+        </div>
+    </div>
+    <!-- ======================================================== -->
+    
+    <!-- ======================================================== -->
+    <!-- Slider Image -->
+    <section class="body-top">
+        <div class="section-slide-banner">
+            <div class="container p-0">
+                <div class="row">
+                    <!-- Slider -->
+                    <div class="slider col-lg-9 col-12">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <a href="#"><img src="./images/slider_1.webp" class="img-fluid" alt="..."></a> 
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="#`"><img src="./images/slider_2.webp" class="img-fluid" alt="..."></a> 
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- End Slider -->
+    
+                    <!-- Sidebar User -->
+                    <div class="sidebar col-lg-3 col-12 d-flex flex-column">
+                        <div class="white component-account d-none d-lg-block">
+                            <div class="block-account p-3">
+                                <div class="image-acc d-flex mb-3">
+                                    <img src="./images/img-account.webp" alt="">
+                                    <div class="child-acc d-flex flex-column ms-2">
+                                        <a class="fw-bold text-dark" href="#" title="Tài khoản" style="text-decoration: none;">Tài khoản</a>
+                                        <span>Xin chào khách</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex gap-2 justify-content-center align-items-center">
+                                    <button class="btn-acc" href="/account/login">Đăng nhập</button>
+                                    <button class="btn-acc" href="/account/register">Đăng ký</button>
+                                </div>
+                            </div>
+    
+                            <ul class="action-link d-flex">
+                                <li>
+                                    <span class="count_item_pr">3</span>
+                                    <a href="#" title="Đã thêm">Đã thêm</a>
+                                </li>
+                                <li>
+                                    <span class="count_item_pr">0</span>
+                                    <a href="#" title="Đã thêm">Đã lưu</a>
+                                </li>
+                                <li>
+                                    <span class="count_item_pr">0</span>
+                                    <a href="#" title="Đã thêm">So sánh</a>
+                                </li>
+                            </ul>
+    
+                            <div class="wrapper">
+                                <div class="ic fb">
+                                    <div class="tooltipp">Facebook</div>
+                                    <span><img src="./images/social_1.webp" alt=""></span>
+                                </div>
+                        
+                                <div class="ic tt">
+                                    <div class="tooltipp">Tiktok</div>
+                                    <span><img src="./images/social_2.webp" alt=""></span>
+                                </div>
+                        
+                                <div class="ic sp">
+                                    <div class="tooltipp">Shopee</div>
+                                    <span><img src="./images/social_3.webp" alt=""></span>
+                                </div>
+                        
+                                <div class="ic lz">
+                                    <div class="tooltipp">Lazada</div>
+                                    <span><img src="./images/social_4.webp" alt=""></span>
+                                </div>
+                        
+                               
+                            </div>
+    
+                            <a href="#" title="Sắm iphone 12 series" class="banner_item d-block">
+                                <img class="img-old img-responsive" alt="Sắm iphone 12 series" src="./images/bb-right.webp">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- End Sidebar User -->
+    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Slider Image -->
+
+    <!-- ======================================================== -->
+
+    <!-- Section Deal -->
+    <section>
+        <div class="container my-3">
+            <div class="white lazyload row">
+                <!-- Title Sale -->
+                <div class="d-flex flex-column align-items-center justify-content-center p-2">
+                    <h2 class=""><a href="#"><img class="img-fluid" src="./images/title-sale.webp"></a></h2>
+                    <div class="flex-time d-flex align-items-center">
+
+                        <div class="timer-in d-flex align-items-baseline">
+                            <h5 class="text-light fw-bold me-2">Kết thúc:&nbsp;</h5>
+                            <p id="js-day" class="text-white fw-bold timer-inner"></p>
+                            <span class="text-white fw-bold"> &nbsp;ngày&nbsp; </span>
+                            <p id="js-hour" class="text-white fw-bold timer-inner"></p>
+                            <span class="text-white fw-bold"> &nbsp;giờ&nbsp; </span>
+                            <p id="js-minute" class="text-white fw-bold timer-inner"></p>
+                            <span class="text-white fw-bold"> &nbsp;phút&nbsp; </span>
+                            <p id="js-second" class="text-white fw-bold timer-inner"></p>
+                            <span class="text-white fw-bold"> &nbsp;giây </span>
+                        </div>   
+                        
+                        <!-- <p id="demo" class="text-white fw-bold me-3"></p> -->
+                    </div>
+                </div>
+
+                <!-- Cart Slide -->
+                <section class="p-slider">
+                    <!-- Cart Slider -->
+                    <div class="glider-contain">
+                        <div class="glider">
+                            <!-- Product Box -->
+                            <div class="product-box bg-light">
+                                <!-- Discount -->
+                                <span class="p-discount">
+                                    -20%
+                                </span>
+            
+                                <!-- Img Container -->
+                                <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./images/product-1.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+            
+                                <div class="p-box-text">
+                                    <!-- Category -->
+                                    <div class="product-category">
+                                        <span>iPhone</span>
+                                    </div>
+                                    <!-- Title -->
+                                    <a href="#" class="product-title">
+                                        iPhone 15 Pro 512G Chính hãng VN/A
+                                    </a>
+                                    <!-- Price Buy -->
+                                    <div class="price-buy">
+                                        <span class="p-price text-danger">29.000.000đ</span>
+                                        <a href="#" class="p-buy-btn">Mua Ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <!-- Product Box -->
+                            <div class="product-box bg-light">
+                                <!-- Discount -->
+                                <span class="p-discount">
+                                    -20%
+                                </span>
+                    
+                                <!-- Img Container -->
+                                <div class="p-img-container">
+                                    <div class="p-img">
+                    
+                                        <a href="#">
+                                            <img src="./images/product-2.png" alt="">
+                                        </a>
+                    
+                    
+                                    </div>
+                                </div>
+                    
+                                <div class="p-box-text">
+                                    <!-- Category -->
+                                    <div class="product-category">
+                                        <span>iPhone</span>
+                                    </div>
+                                    <!-- Title -->
+                                    <a href="#" class="product-title">
+                                        iPhone 15 Pro 512G Chính hãng VN/A
+                                    </a>
+                                    <!-- Price Buy -->
+                                    <div class="price-buy">
+                                        <span class="p-price text-danger">29.000.000đ</span>
+                                        <a href="#" class="p-buy-btn">Mua Ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <!-- Product Box -->
+                            <div class="product-box bg-light">
+                                <!-- Discount -->
+                                <span class="p-discount">
+                                    -20%
+                                </span>
+            
+                                <!-- Img Container -->
+                                <div class="p-img-container">
+                                    <div class="p-img">
+            
+                                        <a href="#">
+                                            <img src="./images/product-3.png" alt="">
+                                        </a>
+            
+            
+                                    </div>
+                                </div>
+            
+                                <div class="p-box-text">
+                                    <!-- Category -->
+                                    <div class="product-category">
+                                        <span>iPhone</span>
+                                    </div>
+                                    <!-- Title -->
+                                    <a href="#" class="product-title">
+                                        iPhone 15 Pro 512G Chính hãng VN/A
+                                    </a>
+                                    <!-- Price Buy -->
+                                    <div class="price-buy">
+                                        <span class="p-price text-danger">29.000.000đ</span>
+                                        <a href="#" class="p-buy-btn">Mua Ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <!-- Product Box -->
+                            <div class="product-box bg-light">
+                                <!-- Discount -->
+                                <span class="p-discount">
+                                    -20%
+                                </span>
+                    
+                                <!-- Img Container -->
+                                <div class="p-img-container">
+                                    <div class="p-img">
+                    
+                                        <a href="#">
+                                            <img src="./images/product-4.png" alt="">
+                                        </a>
+                    
+                    
+                                    </div>
+                                </div>
+                    
+                                <div class="p-box-text">
+                                    <!-- Category -->
+                                    <div class="product-category">
+                                        <span>iPhone</span>
+                                    </div>
+                                    <!-- Title -->
+                                    <a href="#" class="product-title">
+                                        iPhone 15 Pro 512G Chính hãng VN/A
+                                    </a>
+                                    <!-- Price Buy -->
+                                    <div class="price-buy">
+                                        <span class="p-price text-danger">29.000.000đ</span>
+                                        <a href="#" class="p-buy-btn">Mua Ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <!-- Product Box -->
+                            <div class="product-box bg-light">
+                                <!-- Discount -->
+                                <span class="p-discount">
+                                    -20%
+                                </span>
+            
+                                <!-- Img Container -->
+                                <div class="p-img-container">
+                                    <div class="p-img">
+            
+                                        <a href="#">
+                                            <img src="./images/product-5.png" alt="">
+                                        </a>
+            
+            
+                                    </div>
+                                </div>
+            
+                                <div class="p-box-text">
+                                    <!-- Category -->
+                                    <div class="product-category">
+                                        <span>iPhone</span>
+                                    </div>
+                                    <!-- Title -->
+                                    <a href="#" class="product-title">
+                                        iPhone 15 Pro 512G Chính hãng VN/A
+                                    </a>
+                                    <!-- Price Buy -->
+                                    <div class="price-buy">
+                                        <span class="p-price text-danger">29.000.000đ</span>
+                                        <a href="#" class="p-buy-btn">Buy Now</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product Box -->
+                            <div class="product-box bg-light">
+                                <!-- Discount -->
+                                <span class="p-discount">
+                                    -20%
+                                </span>
+            
+                                <!-- Img Container -->
+                                <div class="p-img-container">
+                                    <div class="p-img">
+            
+                                        <a href="#">
+                                            <img src="./images/product-6.png" alt="">
+                                        </a>
+            
+            
+                                    </div>
+                                </div>
+            
+                                <div class="p-box-text">
+                                    <!-- Category -->
+                                    <div class="product-category">
+                                        <span>iPhone</span>
+                                    </div>
+                                    <!-- Title -->
+                                    <a href="#" class="product-title">
+                                        iPhone 15 Pro 512G Chính hãng VN/A
+                                    </a>
+                                    <!-- Price Buy -->
+                                    <div class="price-buy">
+                                        <span class="p-price text-danger">29.000.000đ</span>
+                                        <a href="#" class="p-buy-btn">Mua Ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product Box -->                                                       <!-- Product Box -->
+                            <div class="product-box bg-light">
+                                <!-- Discount -->
+                                <span class="p-discount">
+                                    -20%
+                                </span>
+            
+                                <!-- Img Container -->
+                                <div class="p-img-container">
+                                    <div class="p-img">
+            
+                                        <a href="#">
+                                            <img src="./images/product-7.png" alt="">
+                                        </a>
+            
+            
+                                    </div>
+                                </div>
+            
+                                <div class="p-box-text">
+                                    <!-- Category -->
+                                    <div class="product-category">
+                                        <span>iPhone</span>
+                                    </div>
+                                    <!-- Title -->
+                                    <a href="#" class="product-title">
+                                        iPhone 15 Pro 512G Chính hãng VN/A
+                                    </a>
+                                    <!-- Price Buy -->
+                                    <div class="price-buy">
+                                        <span class="p-price text-danger">29.000.000đ</span>
+                                        <a href="#" class="p-buy-btn">Mua Ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product Box -->
+                            <div class="product-box bg-light">
+                                <!-- Discount -->
+                                <span class="p-discount">
+                                    -20%
+                                </span>
+            
+                                <!-- Img Container -->
+                                <div class="p-img-container">
+                                    <div class="p-img">
+            
+                                        <a href="#">
+                                            <img src="./images/product-8.png" alt="">
+                                        </a>
+            
+            
+                                    </div>
+                                </div>
+            
+                                <div class="p-box-text">
+                                    <!-- Category -->
+                                    <div class="product-category">
+                                        <span>iPhone</span>
+                                    </div>
+                                    <!-- Title -->
+                                    <a href="#" class="product-title">
+                                        iPhone 15 Pro 512G Chính hãng VN/A
+                                    </a>
+                                    <!-- Price Buy -->
+                                    <div class="price-buy" style="">
+                                        <span class="p-price text-danger">29.000.000đ</span>
+                                        <a href="#" class="p-buy-btn">Mua Ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Slider Button -->
+                    <div class="slider-btns">
+                        <button aria-label="Previous" class="glider-prev me-2">
+                            <i class="fa-solid fa-chevron-left" style="color: #030303;"></i>
+                        </button>
+                        <button aria-label="Next" class="glider-next">
+                            <i class="fa-solid fa-chevron-right" style="color: #030303;"></i>
+                        </button>
+                    </div>
+            
+                </section>
+            </div>
+        </div>
+    </section>
+    <!-- End Section Deal -->
+
+    <!-- ======================================================== -->
+
+    <!-- Section Two Banner -->
+    <section>
+        <div class="section-two-banner">
+            <div class="container bg-light">
+                <div class="two-banner-list">
+                    <div class="row">
+                        <figure class="d-block col-md-6 col-12">
+                            <a class="text-center d-block" href="#" title="IPhone 14 mới về">
+                                <img class="lazyload loaded img-fluid" alt="IPhone 14 mới về" src="./images/imgbanner1.webp">
+                            </a>
+                        </figure>
+
+                        <figure class="d-block col-md-6 col-12">
+                            <a class="text-center d-block" href="#" title="Mua theo phân khúc giá">
+                                <img class="lazyload loaded img-fluid" alt="Mua theo phân khúc giá" src="./images/imgbanner2.webp">
+                            </a>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Section Two Banner -->
+
+    <!-- ======================================================== -->
+
+    <!-- Section Feature Product -->
+    <div class="container bg-light my-3">
+        <div class="row">
+            
+            <div class="products col-12 mb-2">
+                <h4 class="fw-bold pt-2" style="text-transform: capitalize; color: #ff0e17; font-size: 20px;">SẢN PHẨM NỔI BẬC</h4>
+                <div class="product-list js-product-list row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1">
+                    
+                </div>
+                
+
+            </div>    
+            
+        </div>
+    </div>
+    <!-- End Section Feature Product -->
+
+    <!-- ======================================================== -->
+
+    <!-- Sales Product -->
+    <div class="container bg-light my-3">
+        <div class="row">
+            <div id="sidebar-sale" class="col-lg-3 col-md-12 col-12">
+                <div class="banner-sale">
+                    <div class="banner-sale-item mb-3">
+                        <a href="#"><img class="img-fluid" src="./images/img_col1.webp"></a>
+                    </div>
+                    
+                    <div class="banner-sale-item">
+                        <a href="#"><img class="img-fluid" src="./images/img_col2.webp"></a>
+                    </div>
+                </div>
+            </div>
+            <div id="sale-product" class="col-lg-9 col-md-12 col-12">
+
+                <div class="products mt-2">
+                    <h4 class="fw-bold" style="text-transform: capitalize; color: #ff0e17; font-size: 20px;">XÃ KHO GIÁ TỐT</h4>
+                    <div class="product-list js-product-sale-list row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1">
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- End Sales Product -->
+
+    <!-- ======================================================== -->
+
+    <!-- Accessories Deal -->
+    <section>
+        <div class="section-accessories-deal">
+            <div class="container" style="background: linear-gradient(180deg, #ff3535 0%, #edd788 100%);
+            ">
+                <div id="accessories-banner" class="row">
+                    <h2 class="accessories-deal-title">
+                        <a href="#"><img class="img-fluid" src="./images/Tagline-rapoo-2-1200x200.png" alt=""></a>
+                    </h2>
+                </div>
+
+                
+                <section class="p-slider">
+                    <!-- Cart Slider -->
+                    <div class="glider-contain">
+                        <div class="glider-2 d-flex">
+                            <!-- Product Box -->
+                            <div class="product-box bg-light">
+                                <!-- Discount -->
+                                <span class="p-discount">
+                                    -50%
+                                </span>
+            
+                                <!-- Img Container -->
+                                <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./images/chuot-khong-day-dareu-lm106g-den-thumb-1-600x600.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+            
+                                <div class="p-box-text">
+                                    <!-- Category -->
+                                    <div class="product-category">
+                                        <span>Phụ kiện máy tính</span>
+                                    </div>
+                                    <!-- Title -->
+                                    <a href="#" class="product-title">
+                                        Chuột không dây DareU LM106G
+                                    </a>
+                                    <!-- Price Buy -->
+                                    <div class="price-buy">
+                                        <span class="p-price text-danger">100.000đ</span>
+                                        <a href="#" class="p-buy-btn">Mua Ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <!-- Product Box -->
+                            <div class="product-box bg-light">
+                                <!-- Discount -->
+                                <span class="p-discount">
+                                    -50%
+                                </span>
+                    
+                                <!-- Img Container -->
+                                <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./images/co-day-dareu-ek87-den-thumb-600x600.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                    
+                                <div class="p-box-text">
+                                    <!-- Category -->
+                                    <div class="product-category">
+                                        <span>Phụ kiện máy tính</span>
+                                    </div>
+                                    <!-- Title -->
+                                    <a href="#" class="product-title">
+                                        Bàn phím có dây DareU EK97
+                                    </a>
+                                    <!-- Price Buy -->
+                                    <div class="price-buy">
+                                        <span class="p-price text-danger">490.000đ</span>
+                                        <a href="#" class="p-buy-btn">Mua Ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <!-- Product Box -->
+                            <div class="product-box bg-light">
+                                <!-- Discount -->
+                                <span class="p-discount">
+                                    -50%
+                                </span>
+            
+                                <!-- Img Container -->
+                                <div class="p-img-container">
+                                    <div class="p-img">
+            
+                                        <a href="#">
+                                            <img src="./images/tui-chong-soc-laptop-156-inch-togo-mem-(1).jpg" alt="">
+                                        </a>
+            
+            
+                                    </div>
+                                </div>
+            
+                                <div class="p-box-text">
+                                    <!-- Category -->
+                                    <div class="product-category">
+                                        <span>Phụ kiện máy tính</span>
+                                    </div>
+                                    <!-- Title -->
+                                    <a href="#" class="product-title">
+                                        Túi chống sốc laptop 15.6 inch Togo vải mềm
+                                    </a>
+                                    <!-- Price Buy -->
+                                    <div class="price-buy">
+                                        <span class="p-price text-danger">150.000đ</span>
+                                        <a href="#" class="p-buy-btn">Mua Ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <!-- Product Box -->
+                            <div class="product-box bg-light">
+                                <!-- Discount -->
+                                <span class="p-discount">
+                                    -50%
+                                </span>
+                    
+                                <!-- Img Container -->
+                                <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./images/pin-sac-du-phong-10000mah-type-c-15w-ava-ds608a-thumb-600x600.jpg" alt="">
+                                        </a>    
+                                    </div>
+                                </div>
+                    
+                                <div class="p-box-text">
+                                    <!-- Category -->
+                                    <div class="product-category">
+                                        <span>Phụ kiện máy tính</span>
+                                    </div>
+                                    <!-- Title -->
+                                    <a href="#" class="product-title">
+                                        Pin sạc dự phòng 10000mAh Type C 15W AVA+ DS608A
+                                    </a>
+                                    <!-- Price Buy -->
+                                    <div class="price-buy">
+                                        <span class="p-price text-danger">300.000đ</span>
+                                        <a href="#" class="p-buy-btn">Mua Ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <!-- Product Box -->
+                            <div class="product-box bg-light">
+                                <!-- Discount -->
+                                <span class="p-discount">
+                                    -50%
+                                </span>
+            
+                                <!-- Img Container -->
+                                <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./images/bluetooth-jbl-go-3-xanh-den-220424-103724-600x600.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+            
+                                <div class="p-box-text">
+                                    <!-- Category -->
+                                    <div class="product-category">
+                                        <span>Phụ kiện điện thoại</span>
+                                    </div>
+                                    <!-- Title -->
+                                    <a href="#" class="product-title">
+                                        Loa Bluetooth JBL Go 3 
+                                    </a>
+                                    <!-- Price Buy -->
+                                    <div class="price-buy">
+                                        <span class="p-price text-danger">890.000đ</span>
+                                        <a href="#" class="p-buy-btn">Mua Ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product Box -->
+                            <div class="product-box bg-light">
+                                <!-- Discount -->
+                                <span class="p-discount">
+                                    -50%
+                                </span>
+            
+                                <!-- Img Container -->
+                                <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./images/camera-ip-360-do-3mp-imou-ta32cp-l-trang-thumb-600x600.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+            
+                                <div class="p-box-text">
+                                    <!-- Category -->
+                                    <div class="product-category">
+                                        <span>Giải pháp an ninh</span>
+                                    </div>
+                                    <!-- Title -->
+                                    <a href="#" class="product-title">
+                                        Camera IP 360 Độ 3MP IMOU TA32CP-L
+                                    </a>
+                                    <!-- Price Buy -->
+                                    <div class="price-buy">
+                                        <span class="p-price text-danger">490.000đ</span>
+                                        <a href="#" class="p-buy-btn">Mua Ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product Box -->                                                       <!-- Product Box -->
+                            <div class="product-box bg-light">
+                                <!-- Discount -->
+                                <span class="p-discount">
+                                    -50%
+                                </span>
+            
+                                <!-- Img Container -->
+                                <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./images/op-lung-iphone-15-pro-max-nhua-deo-iml-uniq-coehl-linear-stardust-thumb-600x600.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+            
+                                <div class="p-box-text">
+                                    <!-- Category -->
+                                    <div class="product-category">
+                                        <span>Phụ kiện điện thoại</span>
+                                    </div>
+                                    <!-- Title -->
+                                    <a href="#" class="product-title">
+                                        Ốp lưng iPhone 15 Pro Max Nhựa dẻo IML UNIQ
+                                    </a>
+                                    <!-- Price Buy -->
+                                    <div class="price-buy">
+                                        <span class="p-price text-danger">400.000đ</span>
+                                        <a href="#" class="p-buy-btn">Mua Ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product Box -->
+                            <div class="product-box bg-light">
+                                <!-- Discount -->
+                                <span class="p-discount">
+                                    -50%
+                                </span>
+            
+                                <!-- Img Container -->
+                                <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./images/type-c-pd-25w-samsung-ep-ta800n-den-thumb-1-2-600x600.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+            
+                                <div class="p-box-text">
+                                    <!-- Category -->
+                                    <div class="product-category">
+                                        <span>Phụ kiện điện thoại</span>
+                                    </div>
+                                    <!-- Title -->
+                                    <a href="#" class="product-title">
+                                        Adapter Sạc Type C PD 25W Samsung EP-TA800N 
+                                    </a>
+                                    <!-- Price Buy -->
+                                    <div class="price-buy">
+                                        <span class="p-price text-danger">150.000đ</span>
+                                        <a href="#" class="p-buy-btn">Mua Ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product Box -->
+                            <div class="product-box bg-light">
+                                <!-- Discount -->
+                                <span class="p-discount">
+                                    -50%
+                                </span>
+            
+                                <!-- Img Container -->
+                                <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./images/tai-nghe-bluetooth-true-wireless-samsung-galaxy-buds-fe-r400n-290224-051438-600x600.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+            
+                                <div class="p-box-text">
+                                    <!-- Category -->
+                                    <div class="product-category">
+                                        <span>Phụ kiện điện thoại</span>
+                                    </div>
+                                    <!-- Title -->
+                                    <a href="#" class="product-title">
+                                        Tai Nghe Bluetooth True Wireless Samsung Galaxy Buds 
+                                    </a>
+                                    <!-- Price Buy -->
+                                    <div class="price-buy">
+                                        <span class="p-price text-danger">1.390.000đ</span>
+                                        <a href="#" class="p-buy-btn">Mua Ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product Box -->
+                            <div class="product-box bg-light">
+                                <!-- Discount -->
+                                <span class="p-discount">
+                                    -50%
+                                </span>
+            
+                                <!-- Img Container -->
+                                <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./images/usb-2-0-16gb-adata-ac008-(1).jpg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+            
+                                <div class="p-box-text">
+                                    <!-- Category -->
+                                    <div class="product-category">
+                                        <span>Phụ kiện máy tính</span>
+                                    </div>
+                                    <!-- Title -->
+                                    <a href="#" class="product-title">
+                                        USB 2.0 16G ADATA AC008  
+                                    </a>
+                                    <!-- Price Buy -->
+                                    <div class="price-buy">
+                                        <span class="p-price text-danger">140.000đ</span>
+                                        <a href="#" class="p-buy-btn">Mua Ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product Box -->
+                            <div class="product-box bg-light">
+                                <!-- Discount -->
+                                <span class="p-discount">
+                                    -50%
+                                </span>
+            
+                                <!-- Img Container -->
+                                <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./images/router-wifi-chuan-n-linksys-e1700-100822-045650-600x600.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+            
+                                <div class="p-box-text">
+                                    <!-- Category -->
+                                    <div class="product-category">
+                                        <span>Phụ kiện máy tính</span>
+                                    </div>
+                                    <!-- Title -->
+                                    <a href="#" class="product-title">
+                                        Router Wifi Chuẩn N Lynksys E1700
+                                    </a>
+                                    <!-- Price Buy -->
+                                    <div class="price-buy">
+                                        <span class="p-price text-danger">830.000đ</span>
+                                        <a href="#" class="p-buy-btn">Mua Ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product Box -->
+                            <div class="product-box bg-light">
+                                <!-- Discount -->
+                                <span class="p-discount">
+                                    -50%
+                                </span>
+            
+                                <!-- Img Container -->
+                                <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./images/sac-du-phong-10000mah-typecpd-22-5w-baseus-ppmd10-cap-lightning-va-typec-thumb-2-600x600.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+            
+                                <div class="p-box-text">
+                                    <!-- Category -->
+                                    <div class="product-category">
+                                        <span>Phụ kiện điện thoại</span>
+                                    </div>
+                                    <!-- Title -->
+                                    <a href="#" class="product-title">
+                                        Pin sạc dự phòng Polymer 10000mAh Type C 22.5W Baseus  
+                                    </a>
+                                    <!-- Price Buy -->
+                                    <div class="price-buy">
+                                        <span class="p-price text-danger">665.000đ</span>
+                                        <a href="#" class="p-buy-btn">Mua Ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product Box -->
+                            <div class="product-box bg-light">
+                                <!-- Discount -->
+                                <span class="p-discount">
+                                    -50%
+                                </span>
+            
+                                <!-- Img Container -->
+                                <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./images/loa-vi-tinh-2-1-fenda-f670x-thumb-600x600.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+            
+                                <div class="p-box-text">
+                                    <!-- Category -->
+                                    <div class="product-category">
+                                        <span>Phụ kiện máy tính</span>
+                                    </div>
+                                    <!-- Title -->
+                                    <a href="#" class="product-title">
+                                        Loa vi tính 2.1 Fenda F670X 
+                                    </a>
+                                    <!-- Price Buy -->
+                                    <div class="price-buy">
+                                        <span class="p-price text-danger">1.490.000đ</span>
+                                        <a href="#" class="p-buy-btn">Mua Ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    
+
+                    <!-- Slider Button -->
+                    <div class="slider-btns">
+                        <button aria-label="Previous" class="glider-prev-2 me-2">
+                            <i class="fa-solid fa-chevron-left" style="color: #030303;"></i>
+                        </button>
+                        <button aria-label="Next" class="glider-next-2">
+                            <i class="fa-solid fa-chevron-right" style="color: #030303;"></i>
+                        </button>
+                    </div>
+            
+                </section>
+                
+            </div>
+        </div>
+    </section>
+    <!-- End Accessories Deal -->
+
+    <!-- ======================================================== -->
+
+    <!-- D M N B -->
+    <section>
+        <div class="container" style="max-width: 1200px;">
+            <div class="dmnb-list row">
+                <div class="block-title">
+                    <h4 class="fw-bold text-center" style="font-size: 20px;">
+                        DANH MỤC NỔI BẬC
+                    </h4>
+                </div>
+                <div class="list-cate d-flex justify-content-center">
+                    <div class="cate-item">
+                        <a class="image" href="#">
+                            <img src="./images/apple-pk.webp" alt="">
+                        </a>
+                        <a class="name-collection" href="#">Phụ kiện Apple</a>
+                    </div>
+                    <div class="cate-item">
+                        <a class="image" href="#">
+                            <img src="./images/1682591754883-icon-12.webp" alt="">
+                        </a>
+                        <a class="name-collection" href="#">Ốp lưng, bao da</a>
+                    </div>
+                    <div class="cate-item">
+                        <a class="image" href="#">
+                            <img src="./images/1682591949287-icon-11.webp" alt="">
+                        </a>
+                        <a class="name-collection" href="#">Dán màn hình</a>
+                    </div>
+                    <div class="cate-item">
+                        <a class="image" href="#">
+                            <img src="./images/1682591859314-icon-14.webp" alt="">
+                        </a>
+                        <a class="name-collection" href="#">Củ sạc, cáp sạc</a>
+                    </div>
+                    <div class="cate-item">
+                        <a class="image" href="#">
+                            <img src="./images/1682591971375-icon-13.webp" alt="">
+                        </a>
+                        <a class="name-collection" href="#">Pin sạc dự phòng</a>
+                    </div>
+                    <div class="cate-item">
+                        <a class="image" href="#">
+                            <img src="./images/pk-mac.webp" alt="">
+                        </a>
+                        <a class="name-collection" href="#">Phụ kiện macbook</a>
+                    </div>
+                    <div class="cate-item">
+                        <a class="image" href="#">
+                            <img src="./images/1682591798318-icon-18.webp" alt="">
+                        </a>
+                        <a class="name-collection" href="#">Loa nghe nhạc</a>
+                    </div>
+                    <div class="cate-item">
+                        <a class="image" href="#">
+                            <img src="./images/1682591841097-icon-16.webp" alt="">
+                        </a>
+                        <a class="name-collection" href="#">Tai nghe</a>
+                    </div>
+                    <div class="cate-item">
+                        <a class="image" href="#">
+                            <img src="./images/pk-tien-ich.webp" alt="">
+                        </a>
+                        <a class="name-collection" href="#">Phụ kiện tiện ích</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End D M N B -->
+
+    <!-- ======================================================== -->
+
+    <!-- Laptop Slide -->
+    <section>
+        <div class="section-laptop-deal">
+            <div class="container" style="background: linear-gradient(180deg, #ff3535 0%, #edd788 100%);
+            ">
+                <div id="laptop-banner" class="row">
+                    <h4 class="laptop-deal-title text-white mt-3" style="font-size: 20px;">
+                        LAPTOP XỊN
+                    </h4>
+                </div>
+
+                <section class="p-slider">
+                    <!-- Cart Slider -->
+                    <div class="glider-contain">
+                        <div class="glider-3 d-flex">
+                            <!-- Product Box -->
+                            <div class="product-box bg-light">
+                                <!-- Discount -->
+                                <span class="p-discount">
+                                    -15%
+                                </span>
+            
+                                <!-- Img Container -->
+                                <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./images/lt-1.webp" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+            
+                                <div class="p-box-text">
+                                    <!-- Category -->
+                                    <div class="product-category">
+                                        <span>Laptop</span>
+                                    </div>
+                                    <!-- Title -->
+                                    <a href="#" class="product-title">
+                                        MacBook Air 13.6 inch 2023 Apple M3
+                                    </a>
+                                    <!-- Price Buy -->
+                                    <div class="price-buy">
+                                        <span class="p-price text-danger">26.990.000đ</span>
+                                     
+                                        <a href="#" class="p-buy-btn">Mua Ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <!-- Product Box -->
+                            <div class="product-box bg-light">
+                                <!-- Discount -->
+                                <span class="p-discount">
+                                    -15%
+                                </span>
+                    
+                                <!-- Img Container -->
+                                <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./images/lt-2.webp" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                    
+                                <div class="p-box-text">
+                                    <!-- Category -->
+                                    <div class="product-category">
+                                        <span>Laptop</span>
+                                    </div>
+                                    <!-- Title -->
+                                    <a href="#" class="product-title">
+                                        Apple MacBook Pro 13 inch 2023 Core i7
+                                    </a>
+                                    <!-- Price Buy -->
+                                    <div class="price-buy">
+                                        <span class="p-price text-danger">31.490.000đ</span>
+                                        <a href="#" class="p-buy-btn">Mua Ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <!-- Product Box -->
+                            <div class="product-box bg-light">
+                                <!-- Discount -->
+                                <span class="p-discount">
+                                    -15%
+                                </span>
+            
+                                <!-- Img Container -->
+                                <div class="p-img-container">
+                                    <div class="p-img">
+            
+                                        <a href="#">
+                                            <img src="./images/lt-3.webp" alt="">
+                                        </a>
+            
+            
+                                    </div>
+                                </div>
+            
+                                <div class="p-box-text">
+                                    <!-- Category -->
+                                    <div class="product-category">
+                                        <span>Laptop</span>
+                                    </div>
+                                    <!-- Title -->
+                                    <a href="#" class="product-title">
+                                        MacBook Air 13 inch Appe M3 Ram 8G Silver
+                                    </a>
+                                    <!-- Price Buy -->
+                                    <div class="price-buy">
+                                        <span class="p-price text-danger">26.790.000đ</span>
+                                        <a href="#" class="p-buy-btn">Mua Ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <!-- Product Box -->
+                            <div class="product-box bg-light">
+                                <!-- Discount -->
+                                <span class="p-discount">
+                                    -15%
+                                </span>
+                    
+                                <!-- Img Container -->
+                                <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./images/lt-4.webp" alt="">
+                                        </a>    
+                                    </div>
+                                </div>
+                    
+                                <div class="p-box-text">
+                                    <!-- Category -->
+                                    <div class="product-category">
+                                        <span>Laptop</span>
+                                    </div>
+                                    <!-- Title -->
+                                    <a href="#" class="product-title">
+                                        MacBook Pro 12 inch 2023 Apple M3 32G Ram
+                                    </a>
+                                    <!-- Price Buy -->
+                                    <div class="price-buy">
+                                        <span class="p-price text-danger">39.990.000đ</span>
+                                        <a href="#" class="p-buy-btn">Mua Ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <!-- Product Box -->
+                            <div class="product-box bg-light">
+                                <!-- Discount -->
+                                <span class="p-discount">
+                                    -15%
+                                </span>
+            
+                                <!-- Img Container -->
+                                <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./images/lt-5.webp" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+            
+                                <div class="p-box-text">
+                                    <!-- Category -->
+                                    <div class="product-category">
+                                        <span>Laptop</span>
+                                    </div>
+                                    <!-- Title -->
+                                    <a href="#" class="product-title">
+                                        Apple MacBook Air 13 inch 2020 Apple M2 16G Ram 
+                                    </a>
+                                    <!-- Price Buy -->
+                                    <div class="price-buy">
+                                        <span class="p-price text-danger">19.890.000đ</span>
+                                        <a href="#" class="p-buy-btn">Mua Ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product Box -->
+                            <div class="product-box bg-light">
+                                <!-- Discount -->
+                                <span class="p-discount">
+                                    -15%
+                                </span>
+            
+                                <!-- Img Container -->
+                                <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./images/lt-6.webp" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+            
+                                <div class="p-box-text">
+                                    <!-- Category -->
+                                    <div class="product-category">
+                                        <span>Laptop</span>
+                                    </div>
+                                    <!-- Title -->
+                                    <a href="#" class="product-title">
+                                        Apple MacBook Pro 2024 15.6 inch M4 Ram 32G
+                                    </a>
+                                    <!-- Price Buy -->
+                                    <div class="price-buy">
+                                        <span class="p-price text-danger">49.990.000đ</span>
+                                        <a href="#" class="p-buy-btn">Mua Ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product Box -->                                                       <!-- Product Box -->
+                            <div class="product-box bg-light">
+                                <!-- Discount -->
+                                <span class="p-discount">
+                                    -50%
+                                </span>
+            
+                                <!-- Img Container -->
+                                <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./images/op-lung-iphone-15-pro-max-nhua-deo-iml-uniq-coehl-linear-stardust-thumb-600x600.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+            
+                                <div class="p-box-text">
+                                    <!-- Category -->
+                                    <div class="product-category">
+                                        <span>Phụ kiện điện thoại</span>
+                                    </div>
+                                    <!-- Title -->
+                                    <a href="#" class="product-title">
+                                        Ốp lưng iPhone 15 Pro Max Nhựa dẻo IML UNIQ
+                                    </a>
+                                    <!-- Price Buy -->
+                                    <div class="price-buy">
+                                        <span class="p-price text-danger">400.000đ</span>
+                                        <a href="#" class="p-buy-btn">Mua Ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product Box -->
+                            <div class="product-box bg-light">
+                                <!-- Discount -->
+                                <span class="p-discount">
+                                    -50%
+                                </span>
+            
+                                <!-- Img Container -->
+                                <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./images/type-c-pd-25w-samsung-ep-ta800n-den-thumb-1-2-600x600.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+            
+                                <div class="p-box-text">
+                                    <!-- Category -->
+                                    <div class="product-category">
+                                        <span>Phụ kiện điện thoại</span>
+                                    </div>
+                                    <!-- Title -->
+                                    <a href="#" class="product-title">
+                                        Adapter Sạc Type C PD 25W Samsung EP-TA800N 
+                                    </a>
+                                    <!-- Price Buy -->
+                                    <div class="price-buy">
+                                        <span class="p-price text-danger">150.000đ</span>
+                                        <a href="#" class="p-buy-btn">Mua Ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product Box -->
+                            <div class="product-box bg-light">
+                                <!-- Discount -->
+                                <span class="p-discount">
+                                    -50%
+                                </span>
+            
+                                <!-- Img Container -->
+                                <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./images/tai-nghe-bluetooth-true-wireless-samsung-galaxy-buds-fe-r400n-290224-051438-600x600.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+            
+                                <div class="p-box-text">
+                                    <!-- Category -->
+                                    <div class="product-category">
+                                        <span>Phụ kiện điện thoại</span>
+                                    </div>
+                                    <!-- Title -->
+                                    <a href="#" class="product-title">
+                                        Tai Nghe Bluetooth True Wireless Samsung Galaxy Buds 
+                                    </a>
+                                    <!-- Price Buy -->
+                                    <div class="price-buy">
+                                        <span class="p-price text-danger">1.390.000đ</span>
+                                        <a href="#" class="p-buy-btn">Mua Ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product Box -->
+                            <div class="product-box bg-light">
+                                <!-- Discount -->
+                                <span class="p-discount">
+                                    -50%
+                                </span>
+            
+                                <!-- Img Container -->
+                                <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./images/usb-2-0-16gb-adata-ac008-(1).jpg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+            
+                                <div class="p-box-text">
+                                    <!-- Category -->
+                                    <div class="product-category">
+                                        <span>Phụ kiện máy tính</span>
+                                    </div>
+                                    <!-- Title -->
+                                    <a href="#" class="product-title">
+                                        USB 2.0 16G ADATA AC008  
+                                    </a>
+                                    <!-- Price Buy -->
+                                    <div class="price-buy">
+                                        <span class="p-price text-danger">140.000đ</span>
+                                        <a href="#" class="p-buy-btn">Mua Ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product Box -->
+                            <div class="product-box bg-light">
+                                <!-- Discount -->
+                                <span class="p-discount">
+                                    -50%
+                                </span>
+            
+                                <!-- Img Container -->
+                                <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./images/router-wifi-chuan-n-linksys-e1700-100822-045650-600x600.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+            
+                                <div class="p-box-text">
+                                    <!-- Category -->
+                                    <div class="product-category">
+                                        <span>Phụ kiện máy tính</span>
+                                    </div>
+                                    <!-- Title -->
+                                    <a href="#" class="product-title">
+                                        Router Wifi Chuẩn N Lynksys E1700
+                                    </a>
+                                    <!-- Price Buy -->
+                                    <div class="price-buy">
+                                        <span class="p-price text-danger">830.000đ</span>
+                                        <a href="#" class="p-buy-btn">Mua Ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product Box -->
+                            <div class="product-box bg-light">
+                                <!-- Discount -->
+                                <span class="p-discount">
+                                    -50%
+                                </span>
+            
+                                <!-- Img Container -->
+                                <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./images/sac-du-phong-10000mah-typecpd-22-5w-baseus-ppmd10-cap-lightning-va-typec-thumb-2-600x600.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+            
+                                <div class="p-box-text">
+                                    <!-- Category -->
+                                    <div class="product-category">
+                                        <span>Phụ kiện điện thoại</span>
+                                    </div>
+                                    <!-- Title -->
+                                    <a href="#" class="product-title">
+                                        Pin sạc dự phòng Polymer 10000mAh Type C 22.5W Baseus  
+                                    </a>
+                                    <!-- Price Buy -->
+                                    <div class="price-buy">
+                                        <span class="p-price text-danger">665.000đ</span>
+                                        <a href="#" class="p-buy-btn">Mua Ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product Box -->
+                            <div class="product-box bg-light">
+                                <!-- Discount -->
+                                <span class="p-discount">
+                                    -50%
+                                </span>
+            
+                                <!-- Img Container -->
+                                <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./images/loa-vi-tinh-2-1-fenda-f670x-thumb-600x600.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+            
+                                <div class="p-box-text">
+                                    <!-- Category -->
+                                    <div class="product-category">
+                                        <span>Phụ kiện máy tính</span>
+                                    </div>
+                                    <!-- Title -->
+                                    <a href="#" class="product-title">
+                                        Loa vi tính 2.1 Fenda F670X 
+                                    </a>
+                                    <!-- Price Buy -->
+                                    <div class="price-buy">
+                                        <span class="p-price text-danger">1.490.000đ</span>
+                                        <a href="#" class="p-buy-btn">Mua Ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    
+
+                    <!-- Slider Button -->
+                    <div class="slider-btns">
+                        <button aria-label="Previous" class="glider-prev-3 me-2">
+                            <i class="fa-solid fa-chevron-left" style="color: #030303;"></i>
+                        </button>
+                        <button aria-label="Next" class="glider-next-3">
+                            <i class="fa-solid fa-chevron-right" style="color: #030303;"></i>
+                        </button>
+                    </div>
+            
+                </section>
+                
+            </div>
+        </div>
+    </section>
+    <!-- End Laptop Slide -->
+
+    <!-- ======================================================== -->
+
+    <!-- Thương hiệu nổi bậc -->
+    <section>
+        <div class="section-laptop-deal">
+            <div class="container custom-1" style="background-color: #d30025; height: 340px;">
+                <div id="laptop-banner" class="row">
+                    <h4 class="laptop-deal-title text-white mt-3" style="font-size: 20px;">
+                        THƯƠNG HIỆU NỔI BẬC
+                    </h4>
+                </div>
+
+                <section class="p-slider">
+                    <!-- Cart Slider -->
+                    <div class="glider-contain">
+                        <div class="glider-5 d-flex glider-custom">
+
+                            <!-- Product Box -->
+                            <div class="product-box bg-light">
+                                <div class="item-vendor">
+                                    <div class="title-vendor">
+                                        <a class="d-block img" href="san-pham-noi-bat">
+                                            <img src="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/vendor_ft_1.png?1708054180263" data-src="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/vendor_ft_1.png?1708054180263" alt="Samsung" class="lazyload loaded">
+                                        </a>
+                                        <div class="right-vendor">
+                                            <h3>
+                                                <a href="san-pham-noi-bat">Thương hiệu Samsung</a>
+                                            </h3>
+                                            <p>
+                                                Người dùng đánh giá
+                                            </p>
+                                            <span class="d-flex gap-2">5.0 <img class="pb-1" src="https://uxwing.com/wp-content/themes/uxwing/download/arts-graphic-shapes/star-icon.png" style="width: 15px;"></span>
+                                        </div>
+                                    </div>
+                                    <div class="list-item">
+
+                                        <a class="block-img" href="/iphone-15-pro-chinh-hang-vn-a" title="iPhone 15 Pro Chính hãng (VN/A)">
+                                            <img width="70" height="70" src="//bizweb.dktcdn.net/thumb/small/100/507/051/products/00904369-638301752870211274-ip-15-pro-max-xanh-1-774ed4d9d6.jpg?v=1704424821593" data-src="//bizweb.dktcdn.net/thumb/small/100/507/051/products/00904369-638301752870211274-ip-15-pro-max-xanh-1-774ed4d9d6.jpg?v=1704424821593" alt="iPhone 15 Pro Chính hãng (VN/A)" class="lazyload img-responsive center-block loaded">
+                                        </a>
+
+                                        <a class="block-img" href="/apple-iphone-13-chinh-hang-vn-a" title="Apple iPhone 13 Chính hãng (VN/A)">
+                                            <img width="70" height="70" src="//bizweb.dktcdn.net/thumb/small/100/507/051/products/2.jpg?v=1704422644523" data-src="//bizweb.dktcdn.net/thumb/small/100/507/051/products/2.jpg?v=1704422644523" alt="Apple iPhone 13 Chính hãng (VN/A)" class="lazyload img-responsive center-block loaded">
+                                        </a>
+
+                                        <a class="block-img" href="/samsung-galaxy-s23-ultra-5g-256g" title="Samsung Galaxy S23 Ultra 5G 256G">
+                                            <img width="70" height="70" src="//bizweb.dktcdn.net/thumb/small/100/507/051/products/2-c1f46ca3-b4d0-4ef5-ab0a-c5e95a88eb44.jpg?v=1704427687790" data-src="//bizweb.dktcdn.net/thumb/small/100/507/051/products/2-c1f46ca3-b4d0-4ef5-ab0a-c5e95a88eb44.jpg?v=1704427687790" alt="Samsung Galaxy S23 Ultra 5G 256G" class="lazyload img-responsive center-block loaded">
+                                        </a>
+                                        <span>+14</span>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <!-- Product Box -->
+                            <div class="product-box bg-light">
+                                <div class="item-vendor">
+                                    <div class="title-vendor">
+                                        <a class="d-block img" href="san-pham-noi-bat" title="Nhập hội Z cùng samsung flip">
+                                            <img src="./images/vendor_ft_2.webp" alt="Huawei">
+                                        </a>
+                                        <div class="right-vendor">
+                                            <h3>
+                                                <a href="#">Thương hiệu Huawei</a>
+                                            </h3>
+                                            <p>
+                                                Người dùng đánh giá
+                                            </p>
+                                            <span class="d-flex gap-2">5.0 <img class="pb-1" src="https://uxwing.com/wp-content/themes/uxwing/download/arts-graphic-shapes/star-icon.png" style="width: 15px;"></span>
+                                        </div>
+                                    </div>
+                                    <div class="list-item">
+
+                                        <a class="block-img" href="/iphone-15-pro-chinh-hang-vn-a" title="iPhone 15 Pro Chính hãng (VN/A)">
+                                            <img width="70" height="70" src="//bizweb.dktcdn.net/thumb/small/100/507/051/products/00904369-638301752870211274-ip-15-pro-max-xanh-1-774ed4d9d6.jpg?v=1704424821593" data-src="//bizweb.dktcdn.net/thumb/small/100/507/051/products/00904369-638301752870211274-ip-15-pro-max-xanh-1-774ed4d9d6.jpg?v=1704424821593" alt="iPhone 15 Pro Chính hãng (VN/A)" class="lazyload img-responsive center-block loaded">
+                                        </a>
+
+                                        <a class="block-img" href="/apple-iphone-13-chinh-hang-vn-a" title="Apple iPhone 13 Chính hãng (VN/A)">
+                                            <img width="70" height="70" src="//bizweb.dktcdn.net/thumb/small/100/507/051/products/2.jpg?v=1704422644523" data-src="//bizweb.dktcdn.net/thumb/small/100/507/051/products/2.jpg?v=1704422644523" alt="Apple iPhone 13 Chính hãng (VN/A)" class="lazyload img-responsive center-block loaded">
+                                        </a>
+
+                                        <a class="block-img" href="/samsung-galaxy-s23-ultra-5g-256g" title="Samsung Galaxy S23 Ultra 5G 256G">
+                                            <img width="70" height="70" src="//bizweb.dktcdn.net/thumb/small/100/507/051/products/2-c1f46ca3-b4d0-4ef5-ab0a-c5e95a88eb44.jpg?v=1704427687790" data-src="//bizweb.dktcdn.net/thumb/small/100/507/051/products/2-c1f46ca3-b4d0-4ef5-ab0a-c5e95a88eb44.jpg?v=1704427687790" alt="Samsung Galaxy S23 Ultra 5G 256G" class="lazyload img-responsive center-block loaded">
+                                        </a>
+                                        <span>+14</span>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <!-- Product Box -->
+                            <div class="product-box bg-light">
+                                <div class="item-vendor">
+                                    <div class="title-vendor">
+                                        <a class="d-block img" href="san-pham-noi-bat" title="Nhập hội Z cùng samsung flip">
+                                            <img src="./images/vendor_ft_3.webp" alt="Huawei">
+                                        </a>
+                                        <div class="right-vendor">
+                                            <h3>
+                                                <a href="#">Thương hiệu Redmi</a>
+                                            </h3>
+                                            <p>
+                                                Người dùng đánh giá
+                                            </p>
+                                            <span class="d-flex gap-2">5.0 <img class="pb-1" src="https://uxwing.com/wp-content/themes/uxwing/download/arts-graphic-shapes/star-icon.png" style="width: 15px;"></span>
+                                        </div>
+                                    </div>
+                                    <div class="list-item">
+
+                                        <a class="block-img" href="/iphone-15-pro-chinh-hang-vn-a" title="iPhone 15 Pro Chính hãng (VN/A)">
+                                            <img width="70" height="70" src="//bizweb.dktcdn.net/thumb/small/100/507/051/products/00904369-638301752870211274-ip-15-pro-max-xanh-1-774ed4d9d6.jpg?v=1704424821593" data-src="//bizweb.dktcdn.net/thumb/small/100/507/051/products/00904369-638301752870211274-ip-15-pro-max-xanh-1-774ed4d9d6.jpg?v=1704424821593" alt="iPhone 15 Pro Chính hãng (VN/A)" class="lazyload img-responsive center-block loaded">
+                                        </a>
+
+                                        <a class="block-img" href="/apple-iphone-13-chinh-hang-vn-a" title="Apple iPhone 13 Chính hãng (VN/A)">
+                                            <img width="70" height="70" src="//bizweb.dktcdn.net/thumb/small/100/507/051/products/2.jpg?v=1704422644523" data-src="//bizweb.dktcdn.net/thumb/small/100/507/051/products/2.jpg?v=1704422644523" alt="Apple iPhone 13 Chính hãng (VN/A)" class="lazyload img-responsive center-block loaded">
+                                        </a>
+
+                                        <a class="block-img" href="/samsung-galaxy-s23-ultra-5g-256g" title="Samsung Galaxy S23 Ultra 5G 256G">
+                                            <img width="70" height="70" src="//bizweb.dktcdn.net/thumb/small/100/507/051/products/2-c1f46ca3-b4d0-4ef5-ab0a-c5e95a88eb44.jpg?v=1704427687790" data-src="//bizweb.dktcdn.net/thumb/small/100/507/051/products/2-c1f46ca3-b4d0-4ef5-ab0a-c5e95a88eb44.jpg?v=1704427687790" alt="Samsung Galaxy S23 Ultra 5G 256G" class="lazyload img-responsive center-block loaded">
+                                        </a>
+                                        <span>+14</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product Box -->
+                            <div class="product-box bg-light">
+                                <div class="item-vendor">
+                                    <div class="title-vendor">
+                                        <a class="d-block img" href="san-pham-noi-bat" title="Nhập hội Z cùng samsung flip">
+                                            <img src="./images/vendor_ft_3.webp" alt="Huawei">
+                                        </a>
+                                        <div class="right-vendor">
+                                            <h3>
+                                                <a href="#">Thương hiệu Redmi</a>
+                                            </h3>
+                                            <p>
+                                                Người dùng đánh giá
+                                            </p>
+                                            <span class="d-flex gap-2">5.0 <img class="pb-1" src="https://uxwing.com/wp-content/themes/uxwing/download/arts-graphic-shapes/star-icon.png" style="width: 15px;"></span>
+                                        </div>
+                                    </div>
+                                    <div class="list-item">
+
+                                        <a class="block-img" href="/iphone-15-pro-chinh-hang-vn-a" title="iPhone 15 Pro Chính hãng (VN/A)">
+                                            <img width="70" height="70" src="//bizweb.dktcdn.net/thumb/small/100/507/051/products/00904369-638301752870211274-ip-15-pro-max-xanh-1-774ed4d9d6.jpg?v=1704424821593" data-src="//bizweb.dktcdn.net/thumb/small/100/507/051/products/00904369-638301752870211274-ip-15-pro-max-xanh-1-774ed4d9d6.jpg?v=1704424821593" alt="iPhone 15 Pro Chính hãng (VN/A)" class="lazyload img-responsive center-block loaded">
+                                        </a>
+
+                                        <a class="block-img" href="/apple-iphone-13-chinh-hang-vn-a" title="Apple iPhone 13 Chính hãng (VN/A)">
+                                            <img width="70" height="70" src="//bizweb.dktcdn.net/thumb/small/100/507/051/products/2.jpg?v=1704422644523" data-src="//bizweb.dktcdn.net/thumb/small/100/507/051/products/2.jpg?v=1704422644523" alt="Apple iPhone 13 Chính hãng (VN/A)" class="lazyload img-responsive center-block loaded">
+                                        </a>
+
+                                        <a class="block-img" href="/samsung-galaxy-s23-ultra-5g-256g" title="Samsung Galaxy S23 Ultra 5G 256G">
+                                            <img width="70" height="70" src="//bizweb.dktcdn.net/thumb/small/100/507/051/products/2-c1f46ca3-b4d0-4ef5-ab0a-c5e95a88eb44.jpg?v=1704427687790" data-src="//bizweb.dktcdn.net/thumb/small/100/507/051/products/2-c1f46ca3-b4d0-4ef5-ab0a-c5e95a88eb44.jpg?v=1704427687790" alt="Samsung Galaxy S23 Ultra 5G 256G" class="lazyload img-responsive center-block loaded">
+                                        </a>
+                                        <span>+14</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product Box -->
+                            <div class="product-box bg-light">
+                                <div class="item-vendor">
+                                    <div class="title-vendor">
+                                        <a class="d-block img" href="san-pham-noi-bat" title="Nhập hội Z cùng samsung flip">
+                                            <img src="./images/vendor_ft_3.webp" alt="Huawei">
+                                        </a>
+                                        <div class="right-vendor">
+                                            <h3>
+                                                <a href="#">Thương hiệu Redmi</a>
+                                            </h3>
+                                            <p>
+                                                Người dùng đánh giá
+                                            </p>
+                                            <span class="d-flex gap-2">5.0 <img class="pb-1" src="https://uxwing.com/wp-content/themes/uxwing/download/arts-graphic-shapes/star-icon.png" style="width: 15px;"></span>
+                                        </div>
+                                    </div>
+                                    <div class="list-item">
+
+                                        <a class="block-img" href="/iphone-15-pro-chinh-hang-vn-a" title="iPhone 15 Pro Chính hãng (VN/A)">
+                                            <img width="70" height="70" src="//bizweb.dktcdn.net/thumb/small/100/507/051/products/00904369-638301752870211274-ip-15-pro-max-xanh-1-774ed4d9d6.jpg?v=1704424821593" data-src="//bizweb.dktcdn.net/thumb/small/100/507/051/products/00904369-638301752870211274-ip-15-pro-max-xanh-1-774ed4d9d6.jpg?v=1704424821593" alt="iPhone 15 Pro Chính hãng (VN/A)" class="lazyload img-responsive center-block loaded">
+                                        </a>
+
+                                        <a class="block-img" href="/apple-iphone-13-chinh-hang-vn-a" title="Apple iPhone 13 Chính hãng (VN/A)">
+                                            <img width="70" height="70" src="//bizweb.dktcdn.net/thumb/small/100/507/051/products/2.jpg?v=1704422644523" data-src="//bizweb.dktcdn.net/thumb/small/100/507/051/products/2.jpg?v=1704422644523" alt="Apple iPhone 13 Chính hãng (VN/A)" class="lazyload img-responsive center-block loaded">
+                                        </a>
+
+                                        <a class="block-img" href="/samsung-galaxy-s23-ultra-5g-256g" title="Samsung Galaxy S23 Ultra 5G 256G">
+                                            <img width="70" height="70" src="//bizweb.dktcdn.net/thumb/small/100/507/051/products/2-c1f46ca3-b4d0-4ef5-ab0a-c5e95a88eb44.jpg?v=1704427687790" data-src="//bizweb.dktcdn.net/thumb/small/100/507/051/products/2-c1f46ca3-b4d0-4ef5-ab0a-c5e95a88eb44.jpg?v=1704427687790" alt="Samsung Galaxy S23 Ultra 5G 256G" class="lazyload img-responsive center-block loaded">
+                                        </a>
+                                        <span>+14</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slider Button -->
+                    <div class="slider-btns">
+                        <button aria-label="Previous" class="glider-prev-5 me-2">
+                            <i class="fa-solid fa-chevron-left" style="color: #030303;"></i>
+                        </button>
+                        <button aria-label="Next" class="glider-next-5">
+                            <i class="fa-solid fa-chevron-right" style="color: #030303;"></i>
+                        </button>
+                    </div>
+            
+                </section>
+                
+            </div>
+        </div>
+    </section>
+    <!-- End Thương hiệu nổi bậc -->
+
+    <!-- ======================================================== -->
+
+    <!-- ======================================================== -->
+
+    <!-- THU CỦ ĐỔI MỚI -->
+    <section>
+        <div class="container custom-1">
+            <div class="row justify-content-center">
+                <h4 class="laptop-deal-title text-white mt-3" style="font-size: 20px;">
+                    LÊN ĐỜI DẾ YÊU
+                </h4>
+                <div class="col-lg-4 col-md-6 col-12 swiper-slide my-2 p-1">
+                    <div class="slide-step">
+                        <div class="img">
+                            <img src="thucu_img_1.png">
+                        </div>
+                        <div class="child" data-index="1">
+                            <h5>
+                                Bước 1
+                            </h5>
+                            <p>
+                                Liên hệ số Hotline để được tư vấn
+                            </p>
+                        </div>
+                    </div>
+                </div> 
+                <div class="col-lg-4 col-md-6 col-12 swiper-slide my-2 p-1">
+                    <div class="slide-step">
+                        <div class="img">
+                            <img src="thucu_img_2.png">
+                        </div>
+                        <div class="child" data-index="2">
+                            <h5>
+                                Bước 2
+                            </h5>
+                            <p>
+                                Nhân viên kỹ thuật kiểm tra máy
+                            </p>
+                        </div>
+                    </div>
+                </div> 
+                <div class="col-lg-4 col-md-6 col-12 swiper-slide my-2 p-1">
+                    <div class="slide-step">
+                        <div class="img">
+                            <img src="thucu_img_3.png">
+                        </div>
+                        <div class="child" data-index="3">
+                            <h5>
+                                Bước 3
+                            </h5>
+                            <p>
+                                Nhận tiền hoặc nâng cấp máy mới
+                            </p>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </section>
+    <!-- End THU CỦ ĐỔI MỚI -->
+
+    <!-- ======================================================== -->
+
+    <!-- TIN TỨC CÔNG NGHỆ -->
+
+    <div class="container my-3 custom-2">
+        <div class="row">
+            <div class="col-12 d-flex align-items-baseline justify-content-between mt-3">
+                <h4 class="title-module">
+					<a href="#" title="Tin công nghệ">TIN CÔNG NGHỆ</a>
+				</h4>
+                
+                <p class="text-end"><a class="button-more" href="tin-tuc" title="Xem tất cả">Xem thêm<i class="fa-solid fa-chevron-right fa-sm"></i></a></p>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-7 col-md-6 col-12">
+                <div class="image-banner-first">
+                    <a href="#"><img src="./images/b1.webp" class="img-fluid"></a>
+                </div>
+                <div class="custom-text-title title-first mt-2 d-flex justify-content-between">
+                    <a href="#">
+                        <p class="text-title fw-bold custom-text-title">
+                            Phụ kiện này biến iPhone của bạn thành BlackBerry
+                        </p>
+                    </a>
+                    <p class="text-muted text-end" style="font-size: 15px;">Thứ tư 22/05/2024</p>
+                </div>
+                
+            </div>
+            <div class="col-lg-5 col-md-6 col-12">
+                <div class="right-1 d-flex align-items-start border-bottom">
+                    <div class="image-banner-first me-2">
+                        <a href="#"><img src="./images/r1.webp" class="" style="width: 130px;"></a>
+                    </div>
+                    <div class="custom-text-title title-first d-flex flex-column align-items-start">
+                        <a href="#">
+                            <p class="text-title fw-bold custom-text-title" style="font-size: 15px;">
+                                OnePlus Buds 3 lộ giá bán hấp dẫn trước khi ra mắt
+                            </p>
+                        </a>
+                        <p class="text-muted" style="font-size: 15px;">Thứ tư 22/05/2024</p>
+                    </div>
+                </div>
+
+                <div class="right-2 d-flex align-items-start border-bottom">
+                    <div class="image-banner-first me-2">
+                        <a href="#"><img src="./images/r2.webp" class="" style="width: 130px;"></a>
+                    </div>
+                    <div class="custom-text-title title-first d-flex flex-column align-items-start">
+                        <a href="#">
+                            <p class="text-title fw-bold custom-text-title" style="font-size: 15px;">
+                                macOS Sonoma 14.3 public beta 2 được phát hành, tiếp tục sửa lỗi
+                            </p>
+                        </a>
+                        <p class="text-muted" style="font-size: 15px;">Thứ tư 22/05/2024</p>
+                    </div>
+                </div>
+
+                <div class="right-3 d-flex align-items-start border-bottom">
+                    <div class="image-banner-first me-2">
+                        <a href="#"><img src="./images/r3.webp" class="" style="width: 130px;"></a>
+                    </div>
+                    <div class="custom-text-title title-first d-flex flex-column align-items-start">
+                        <a href="#">
+                            <p class="text-title fw-bold custom-text-title">
+                                Cận cảnh HONOR 90 GT - Thiết kế tinh tế, mặt lưng giả da
+                            </p>
+                        </a>
+                        <p class="text-muted" style="font-size: 15px;">Thứ tư 22/05/2024</p>
+                    </div>
+                </div>
+
+                <div class="right-4 d-flex align-items-start border-bottom">
+                    <div class="image-banner-first me-2">
+                        <a href="#"><img src="./images/r4.webp" class="" style="width: 130px;"></a>
+                    </div>
+                    <div class="custom-text-title title-first d-flex flex-column align-items-start">
+                        <a href="#">
+                            <p class="text-title fw-bold custom-text-title" style="font-size: 15px;">
+                                Vivo ra mắt tai nghe iQOO TWS 1e với pin 44 giờ, hỗ trợ ANC, giá 610 ngàn đồng
+                            </p>
+                        </a>
+                        <p class="text-muted" style="font-size: 15px;">Thứ sáu 24/05/2024</p>
+                    </div>
+                </div>
+
+                <div class="right-5 d-flex align-items-start">
+                    <div class="image-banner-first me-2">
+                        <a href="#"><img src="./images/r5.webp" class="" style="width: 130px;"></a>
+                    </div>
+                    <div class="custom-text-title title-first d-flex flex-column align-items-start">
+                        <a href="#">
+                            <p class="text-title fw-bold custom-text-title" style="font-size: 15px;">
+                                Lenovo Xiaoxin Air 14 2023 Ryzen Edition ra mắt với CPU AMD R7 7840U
+                            </p>
+                        </a>
+                        <p class="text-muted" style="font-size: 15px;">Thứ sáu 24/05/2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END TIN TỨC CÔNG NGHỆ -->
+
+
+    
+    <section style="margin-bottom:20px;">
+        <div class="section_service container p-0">
+            <div class="white">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="itemsv">
+                            <div class="image">
+                                <img class="lazyload loaded img-fluid" src="ico_sv1.png">
+                            </div>
+                            <div class="contentsv">
+                                <h4>
+                                    Hàng chính hãng
+                                </h4>
+                                <p>
+                                    Đa dạng và chuyên sâu
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="itemsv">
+                            <div class="image">
+                                <img class="lazyload loaded img-fluid" src="ico_sv2.png">
+                            </div>
+                            <div class="contentsv">
+                                <h4>
+                                    Đổi trả trong 7 ngày
+                                </h4>
+                                <p>
+                                    Kể từ ngày mua hàng
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="itemsv">
+                            <div class="image">
+                                <img class="lazyload loaded img-fluid" src="ico_sv3.png">
+                            </div>
+                            <div class="contentsv">
+                                <h4>
+                                    Cam kết 100%
+                                </h4>
+                                <p>
+                                    Chất lượng sản phẩm
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="itemsv">
+                            <div class="image">
+                                <img class="lazyload loaded img-fluid" src="ico_sv4.png" alt="Giao hàng 2H">
+                            </div>
+                            <div class="contentsv">
+                                <h4>
+                                    Giao hàng 2H
+                                </h4>
+                                <p>
+                                    Theo từng sản phẩm
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================== Footer ============================= -->
+
+    <footer class="footer">
+        <div class="first-footer d-flex">
+            <div class="container border-bottom">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <h4 class="title-menu-footer">
+                            <span>
+                                Văn phòng giao dịch 
+                            </span>
+                        </h4>
+                        <ul class="list-menu">
+                            
+                            <li class="li_menu"><a href="/he-thong-cua-hang" title="Cơ sở chính thức">Cơ sở chính thức</a></li>
+                            
+                            <li class="li_menu"><a href="/he-thong-cua-hang" title="Địa điểm bán hàng">Địa điểm bán hàng</a></li>
+                            
+                            <li class="li_menu"><a href="/gioi-thieu" title="Tuyển cộng tác viên">Tuyển cộng tác viên</a></li>
+                            
+                            <li class="li_menu"><a href="/gioi-thieu" title="Tuyển dụng">Tuyển dụng</a></li>
+                            
+                            <li class="li_menu"><a href="/gioi-thieu" title="Fanpage trực tuyến">Fanpage trực tuyến</a></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <h4 class="title-menu-footer">
+                            <span>
+                                Về chúng tôi 
+                            </span>
+                        </h4>
+                        <ul class="list-menu">
+                            
+                            <li class="li_menu"><a href="/gioi-thieu" title="Đôi nét về công ty">Đôi nét về công ty</a></li>
+                            
+                            <li class="li_menu"><a href="/gioi-thieu" title="Lịch sử hình thành">Lịch sử hình thành</a></li>
+                            
+                            <li class="li_menu"><a href="/gioi-thieu" title="Giải thưởng cao quý">Giải thưởng cao quý</a></li>
+                            
+                            <li class="li_menu"><a href="/gioi-thieu" title="Cơ hội cho ai">Cơ hội cho ai</a></li>
+                            
+                            <li class="li_menu"><a href="/gioi-thieu" title="Thương hiệu số 1">Thương hiệu số 1</a></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <h4 class="title-menu-footer">
+                            <span>
+                                Chính sách bán hàng 
+                            </span>
+                        </h4>
+                        <ul class="list-menu">
+                            
+                            <li class="li_menu"><a href="/chinh-sach-chung" title="Chính sách chung">Chính sách chung</a></li>
+                            
+                            <li class="li_menu"><a href="/chinh-sach-chung" title="Chính sách đổi trả">Chính sách đổi trả</a></li>
+                            
+                            <li class="li_menu"><a href="/chinh-sach-chung" title="Chính sách bảo hành">Chính sách bảo hành</a></li>
+                            
+                            <li class="li_menu"><a href="/chinh-sach-chung" title="Chính sách thành viên">Chính sách thành viên</a></li>
+                            
+                            <li class="li_menu"><a href="/chinh-sach-chung" title="Chính sách điểm thưởng">Chính sách điểm thưởng</a></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <h4 class="title-menu-footer">
+                            <span>
+                                Theo dõi chúng tôi 
+                            </span>
+                        </h4>
+                        <ul class="list-menu">
+                            
+                            <li class="li_menu"><a href="https://www.facebook.com/" title="Theo dõi trên Fanpage">Theo dõi trên Fanpage</a></li>
+                            
+                            <li class="li_menu"><a href="https://www.instagram.com/" title="Theo dõi trên Instagram">Theo dõi trên Instagram</a></li>
+                            
+                            <li class="li_menu"><a href="https://twitter.com/home?lang=vi" title="Theo dõi trên X">Theo dõi trên X</a></li>
+                            
+                            <li class="li_menu"><a href="/" title="Theo dõi trên Tiktok">Theo dõi trên Tiktok</a></li>
+                            
+                            <li class="li_menu"><a href="https://www.youtube.com/" title="Theo dõi trên Youtube">Theo dõi trên Youtube</a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <div class="child-footer d-flex">
+            <div class="container">
+                <div class="row d-flex align-items-baseline">
+                    <div class="col-lg-6 col-12">
+                        <div class="d-flex align-items-center gap-2">
+                            <a href="#"><img src="./images/LGE.jpg" class="img-fluid" style="width: 80px;"></a>
+                            <h4 class="title-menu">
+                                
+                                <span>
+                                    Thế giới mobile cho mọi người
+                                </span>
+                            </h4>
+                        </div>
+                        
+                        <ul>
+                            <li>Copyright@ 2024 Công ty cổ phần thương mại AT Mobile</li>
+                            <li>Chứng nhận ĐKKD số: 038828xxxx do sở KH &amp; ĐT TP.Hồ Chí Minh cấp</li>
+                            <li>Địa chỉ: 479 Nguyễn Thị Định, Phường Cát Lái, Tp Thủ đức. HCM</li>
+                            <li>Điện thoại: <a class="fone" href="tel:0932090910">0932.09.09.10</a> 
+                                - Website: <a href="#">www.atmobile.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <h4 class="title-menu">
+                            <span>
+                                Nhận tin khuyến mãi
+                            </span>
+                        </h4>
+                        <div class="mail_footer subscribe formchip-email" id="formchimp">
+                            <form id="mc-form" class="newsletter-form" data-toggle="validator" action="https://gmail.us2.list-manage.com/subscribe/post-json?u=ef7f65e3be67e30ff1c4bd591&amp;id=a7430e9bc5">
+                                <div class="input-group">
+                                    <div class="groupiput">
+                                        <input aria-label="Địa chỉ Email" type="email" class="form-control" placeholder="Nhập email của bạn" name="EMAIL" required="" autocomplete="off">
+                                    </div>
+                                    <span class="input-group-append subscribe">
+                                        <button class="btn btn-default" type="submit" aria-label="Đăng ký" name="subscribe">Đăng ký</button>
+                                    </span>
+                                </div>
+                            </form>
+                            <div class="mailchimp-alerts">
+                                <div class="mailchimp-submitting"></div>
+                                <div class="mailchimp-success"></div>
+                                <div class="mailchimp-error"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="social-footer">
+                            <a href="#" title="Facebook">
+                                <img class="lazyload loaded" width="32" height="32" src="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/social_1.jpg?1708054180263" data-src="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/social_1.jpg?1708054180263" alt="Facebook">
+                            </a>
+                            <a href="#" title="Tiktok">
+                                <img class="lazyload loaded" width="32" height="32" src="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/social_2.jpg?1708054180263" data-src="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/social_2.jpg?1708054180263" alt="Tiktok">
+                            </a>
+                            <a href="#" title="Shopee">
+                                <img class="lazyload loaded" width="32" height="32" src="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/social_3.jpg?1708054180263" data-src="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/social_3.jpg?1708054180263" alt="Shopee">
+                            </a>
+                            <a href="#" title="Lazada">
+                                <img class="lazyload loaded" width="32" height="32" src="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/social_4.jpg?1708054180263" data-src="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/social_4.jpg?1708054180263" alt="Lazada">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+
+   
+    <!-- Footer Bottom -->
+    <div id="footer-b">
+        <footer class="bg-dark text-center text-white">
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2); font-size: 15px;">
+                © 2024 Copyright:
+                <a class="text-white" href="#">www.atmobile.com</a>
+                Designed by Anh Tuan Nguyen
+            </div>
+            <!-- Copyright -->
+        </footer>
+    </div>
+    <!-- End Footer Bottom -->
+    <!-- ======================================================== -->
+    <!-- Sidebar Contact -->
+    <div class="container-popup">
+        <div class="menu_icon_box">
+            <i id="icon-right" class="fa-solid fa-circle-chevron-left fa-xl" style="color: #d7eb22;"></i>
+        </div>
+
+        <div class="box">
+            <nav>
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-phone fa-xl" style="color: #dbf306;"></i></a></li>
+                    <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0 0 48 48">
+                        <path fill="#2962ff" d="M15,36V6.827l-1.211-0.811C8.64,8.083,5,13.112,5,19v10c0,7.732,6.268,14,14,14h10	c4.722,0,8.883-2.348,11.417-5.931V36H15z"></path><path fill="#eee" d="M29,5H19c-1.845,0-3.601,0.366-5.214,1.014C10.453,9.25,8,14.528,8,19	c0,6.771,0.936,10.735,3.712,14.607c0.216,0.301,0.357,0.653,0.376,1.022c0.043,0.835-0.129,2.365-1.634,3.742	c-0.162,0.148-0.059,0.419,0.16,0.428c0.942,0.041,2.843-0.014,4.797-0.877c0.557-0.246,1.191-0.203,1.729,0.083	C20.453,39.764,24.333,40,28,40c4.676,0,9.339-1.04,12.417-2.916C42.038,34.799,43,32.014,43,29V19C43,11.268,36.732,5,29,5z"></path><path fill="#2962ff" d="M36.75,27C34.683,27,33,25.317,33,23.25s1.683-3.75,3.75-3.75s3.75,1.683,3.75,3.75	S38.817,27,36.75,27z M36.75,21c-1.24,0-2.25,1.01-2.25,2.25s1.01,2.25,2.25,2.25S39,24.49,39,23.25S37.99,21,36.75,21z"></path><path fill="#2962ff" d="M31.5,27h-1c-0.276,0-0.5-0.224-0.5-0.5V18h1.5V27z"></path><path fill="#2962ff" d="M27,19.75v0.519c-0.629-0.476-1.403-0.769-2.25-0.769c-2.067,0-3.75,1.683-3.75,3.75	S22.683,27,24.75,27c0.847,0,1.621-0.293,2.25-0.769V26.5c0,0.276,0.224,0.5,0.5,0.5h1v-7.25H27z M24.75,25.5	c-1.24,0-2.25-1.01-2.25-2.25S23.51,21,24.75,21S27,22.01,27,23.25S25.99,25.5,24.75,25.5z"></path><path fill="#2962ff" d="M21.25,18h-8v1.5h5.321L13,26h0.026c-0.163,0.211-0.276,0.463-0.276,0.75V27h7.5	c0.276,0,0.5-0.224,0.5-0.5v-1h-5.321L21,19h-0.026c0.163-0.211,0.276-0.463,0.276-0.75V18z"></path>
+                        </svg></a></li>
+                    <li><a href="#"><i class="fa-brands fa-facebook-messenger fa-xl" style="color: #d7eb22;"></i></a></li>
+                    <li><a href="#"><i class="fa-solid fa-envelope fa-xl" style="color: #d7eb22;"></i>  </a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- End Sidebar Contact -->
+    <!-- ======================================================== -->
+    <!-- Back To Top -->
+
+    <div id="backtop">
+        <i class="fa-solid fa-chevron-up"></i>
+    </div>
+
+    <!-- End Back To Top -->
+    <!-- ======================================================== -->
+
+    <script src="./scripts/contact-popup.js">
+        
+    </script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous">
+    </script>
+    <script src="./scripts/menu-slide.js"></script>
+    <script src="./scripts/glider.min.js"></script>
+
+    <script>
+        new Glider(document.querySelector('.glider'), {
+            slidesToScroll: 1,
+            slidesToShow: 4,
+            draggable: true,
+            dots: '.dots',
+            arrows: {
+                prev: '.glider-prev',
+                next: '.glider-next'
+            },
+
+            responsive: [
+                {
+                    // screens greater than >= 775px
+                    breakpoint: 1200,
+                    settings: {
+                        // Set to `auto` and provide item width to adjust to viewport
+                        slidesToShow: 4,
+                        slidesToScroll: 2,
+                    }
+                },{
+                    // screens greater than >= 1024px
+                    breakpoint: 900,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                    }
+                },{
+                    // screens greater than >= 1024px
+                    breakpoint: 640,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                    }
+                },{
+                    // screens greater than >= 1024px
+                    breakpoint: 304,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                },{
+                    // screens greater than >= 1024px
+                    breakpoint: 0,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                }
+            ]
+
+        });
+    </script>
+
+    <script>
+        new Glider(document.querySelector('.glider-2'), {
+            slidesToScroll: 1,
+            slidesToShow: 2,
+            draggable: true,
+            dots: '.dots',
+            arrows: {
+                prev: '.glider-prev-2',
+                next: '.glider-next-2'
+            },
+
+            responsive: [
+                {
+                    // screens greater than >= 775px
+                    breakpoint: 1200,
+                    settings: {
+                        // Set to `auto` and provide item width to adjust to viewport
+                        slidesToShow: 4,
+                        slidesToScroll: 2,
+                    }
+                },{
+                    // screens greater than >= 1024px
+                    breakpoint: 900,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                    }
+                },{
+                    // screens greater than >= 1024px
+                    breakpoint: 640,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                    }
+                },{
+                    // screens greater than >= 1024px
+                    breakpoint: 304,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                },{
+                    // screens greater than >= 1024px
+                    breakpoint: 0,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                }
+            ]
+
+        });
+    </script>
+
+    <script>
+        new Glider(document.querySelector('.glider-3'), {
+            slidesToScroll: 1,
+            slidesToShow: 2,
+            draggable: true,
+            dots: '.dots',
+            arrows: {
+                prev: '.glider-prev-3',
+                next: '.glider-next-3'
+            },
+
+            responsive: [
+                {
+                    // screens greater than >= 775px
+                    breakpoint: 1200,
+                    settings: {
+                        // Set to `auto` and provide item width to adjust to viewport
+                        slidesToShow: 4,
+                        slidesToScroll: 2,
+                    }
+                },{
+                    // screens greater than >= 1024px
+                    breakpoint: 900,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                    }
+                },{
+                    // screens greater than >= 1024px
+                    breakpoint: 640,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                    }
+                },{
+                    // screens greater than >= 1024px
+                    breakpoint: 304,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                },{
+                    // screens greater than >= 1024px
+                    breakpoint: 0,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                }
+            ]
+
+        });
+    </script>
+
+    <script>
+        new Glider(document.querySelector('.glider-4'), {
+            slidesToScroll: 1,
+            slidesToShow: 1,
+            draggable: true,
+            dots: '.dots',
+            arrows: {
+                prev: '.glider-prev-4',
+                next: '.glider-next-4'
+            },
+
+            responsive: [
+                {
+                    // screens greater than >= 775px
+                    breakpoint: 1200,
+                    settings: {
+                        // Set to `auto` and provide item width to adjust to viewport
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                    }
+                },{
+                    // screens greater than >= 1024px
+                    breakpoint: 900,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                    }
+                },{
+                    // screens greater than >= 1024px
+                    breakpoint: 640,
+                    settings: {
+                        slidesToShow: 1.5,
+                        slidesToScroll: 1,
+                    }
+                },{
+                    // screens greater than >= 1024px
+                    breakpoint: 304,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                },{
+                    // screens greater than >= 1024px
+                    breakpoint: 0,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                }
+            ]
+
+        });
+    </script>
+
+    <script>
+        new Glider(document.querySelector('.glider-5'), {
+            slidesToScroll: 1,
+            slidesToShow: 1,
+            draggable: true,
+            dots: '.dots',
+            arrows: {
+                prev: '.glider-prev-5',
+                next: '.glider-next-5'
+            },
+
+            responsive: [
+                {
+                    // screens greater than >= 775px
+                    breakpoint: 1200,
+                    settings: {
+                        // Set to `auto` and provide item width to adjust to viewport
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                    }
+                },{
+                    // screens greater than >= 1024px
+                    breakpoint: 900,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                    }
+                },{
+                    // screens greater than >= 1024px
+                    breakpoint: 640,
+                    settings: {
+                        slidesToShow: 1.5,
+                        slidesToScroll: 1,
+                    }
+                },{
+                    // screens greater than >= 1024px
+                    breakpoint: 304,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                },{
+                    // screens greater than >= 1024px
+                    breakpoint: 0,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                }
+            ]
+
+        });
+    </script>
+
+    <script>
+        new Glider(document.querySelector('.glider-6'), {
+            slidesToScroll: 1,
+            slidesToShow: 3,
+            draggable: true,
+            dots: '.dots',
+            arrows: {
+                prev: '.glider-prev-6',
+                next: '.glider-next-6'
+            },
+
+            responsive: [
+                {
+                    // screens greater than >= 775px
+                    breakpoint: 1200,
+                    settings: {
+                        // Set to `auto` and provide item width to adjust to viewport
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                    }
+                },{
+                    // screens greater than >= 1024px
+                    breakpoint: 900,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                    }
+                },{
+                    // screens greater than >= 1024px
+                    breakpoint: 640,
+                    settings: {
+                        slidesToShow: 1.5,
+                        slidesToScroll: 1,
+                    }
+                },{
+                    // screens greater than >= 1024px
+                    breakpoint: 304,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                },{
+                    // screens greater than >= 1024px
+                    breakpoint: 0,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                }
+            ]
+
+        });
+    </script>
+    
+    <script type="module" src="./scripts/mobile.js"></script>
+    <script type="module" src="./scripts/import-product-sale.js"></script>
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("July 5, 2024 00:00:00").getTime();
+        
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+        
+          // Get today's date and time
+          var now = new Date().getTime();
+            
+          // Find the distance between now and the count down date
+          var distance = countDownDate - now;
+            
+          // Time calculations for days, hours, minutes and seconds
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+          
+          
+
+          // Output the result in an element with id="demo"
+            // document.getElementById("demo").innerHTML = days + " ngày " + hours + " giờ "
+            // + minutes + " phút " + seconds + " giây ";
+
+          document.getElementById("js-day").innerHTML = days;
+          document.getElementById("js-hour").innerHTML = hours;
+          document.getElementById("js-minute").innerHTML = minutes; 
+          document.getElementById("js-second").innerHTML = seconds;
+            
+          // If the count down is over, write some text 
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+          }
+        }, 1000);
+    </script>
+
+    <!-- Back to Top -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                if($(this).scrollTop()) {
+                    $('#backtop').fadeIn();
+                } else {
+                    $('#backtop').fadeOut();
+                }
+            });
+            $('#backtop').click(function() {
+                $('html, body').animate({scrollTop: 0}, 500);
+            });
+        });
+    </script> 
+    <!-- End Back to Top -->
+</body>
+    
+
+</html>
